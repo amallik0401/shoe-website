@@ -1,0 +1,356 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --navbar-height:59px;
+}
+
+/* navbar */
+.navbar{
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 70px;
+}
+
+.navbar h1{
+    margin: 10px;
+    cursor: pointer;
+    color: white;
+    padding: 1px;
+    font-size: 2.3rem;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin-left: 60px;
+}
+
+.navbar ul li{
+    margin: 10px;
+    align-items: center;
+}
+
+.navbar ul li a{
+    color: rgb(255, 255, 255);
+    display: block;
+    padding: 3px 5px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.navbar::before{
+    content: "";
+    background-color:black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity:0.99;
+}
+
+.navbar ul li a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar #search{
+    padding: 8px;
+    position: absolute;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    border-radius: 20px;
+    right:200px;
+}
+
+.navbar #cart{
+    padding: 8px;
+    margin-left: 15px;
+    font-size: 0.8rem;
+    cursor:pointer;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    right: 125px;
+}
+
+.navbar #profile{
+    padding: 8px;
+    margin-left: 15px;
+    font-size: 0.8rem;
+    cursor:pointer;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    right: 30px;
+}
+
+.navbar #search:hover{
+    color: black;
+    background-color: white;
+}
+
+.navbar #cart:hover{
+    color: black;
+    background-color: white;
+}
+
+.navbar #profile:hover{
+    color: black;
+    background-color: white;
+}
+
+/* main body */
+
+.main{
+    height: 605px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main::before{
+    content: "";
+    background: url(../img/bgmain.jpg)no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.99;
+}
+
+.main h1{
+height: 100px;
+width: 500px;
+font-size: 3.6rem;
+color:#E6E6FA;
+padding: 20px;
+}
+
+.main p{
+color: #bdbdcf;
+margin-top: 150px;
+width: 300px;
+padding: 20px;
+}
+
+.main .btnorder{
+    height: 40px;
+    width: 130px;
+    border-radius: 2px;
+    margin: 20px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+/* purchase segment */
+.purchase{
+    height: 660px;
+    position: relative;
+}
+
+.purchase h1{
+    text-align: center;
+    padding: 10px;
+    margin-top: 75px;
+    font-size: 2rem;
+    font-family: "Platypi", serif;
+}
+
+.purchase .options{
+  display: flex;
+}
+
+.purchase .options img{
+    width: 450px;
+    height:450px;
+    border: none;
+    margin: 25px;
+    transition: transform.3s;
+    cursor: pointer;
+}
+.purchase .options img:hover{
+    transform: scale(1.1);
+}
+.purchase .options figcaption{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 5px;
+}
+.purchase .box .purchasebtn{
+    height: 36px;
+    width: 230px;
+    border-radius: 2px;
+    margin: 20px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 135px;
+}
+/* poster */
+.poster{
+    margin-top: 20px;
+    display: flex;
+    height:780px;
+    cursor: pointer;
+}
+
+.poster h2{
+    height: 300px;
+    width: 500px;
+   position: absolute;
+   right: 30px;
+    font-size: 4rem;
+
+}
+.poster::before{
+    content: "";
+    background: url(../img/newbg.remini-enhanced\ \(1\).jpg)no-repeat center center/cover;
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    z-index: -1;
+    opacity:0.99;
+    margin-left: 40px;
+}
+
+/* offer line */
+.offer h2{
+    text-align: center;
+    color: rgb(98, 29, 29);
+    font-size: 3rem;
+}
+
+.offer p{
+    text-align: center;
+    color: rgb(71, 64, 64);
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+/* shopping */
+.shopping{
+    margin-top: 50px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+   height: 540px;
+}
+
+.shopping::-webkit-scrollbar {
+    width:5px;
+    scrollbar-width: thin;
+}
+   
+.shopping::-webkit-scrollbar-track {
+   background-color: rgb(202, 194, 194);
+    width: 2px;
+    height: 2px;
+}
+
+.shopping::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    width: 2px;
+    height: 2px;
+    border-radius: 5px;
+}
+
+.shopping .item{
+    cursor: pointer;
+    min-width: 400px;
+    height: 450px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+
+.shopping .item img{
+    width: 400px;
+    height: 450px;
+}
+
+.shopping .item figcaption{
+    color: black;
+    font-size: 1.7rem;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+}
+
+.shopping .item .MRP{
+    font-size: 1.1rem;
+    color: #646467;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    margin-top: 50px;
+    background-color: rgb(228, 209, 179);
+}
+  
+.footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+  
+.fMenuTitle {
+    font-size: 16px;
+}
+  
+.fList {
+    padding: 0;
+    list-style: none;
+}
+  
+.fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+}
+  
+.footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+  
+.fInput {
+    padding: 5px;
+}
+  
+.footerLeft .fMenuTitle{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+    
+.copyright{
+    font-weight: 300;
+    font-size: 14px;
+}
